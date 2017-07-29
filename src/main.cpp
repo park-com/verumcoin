@@ -1103,14 +1103,8 @@ int64_t GetProofOfStakeReward(int64_t nCoinAge, unsigned int nBits, int64_t nTim
         nRewardCoinYear = 5 * CENT;
     } else if (Balance >= (50000 * COIN) &&  Balance <= (100000 * COIN)) {
         nRewardCoinYear = 6 * CENT;
-    } else if (Balance >= (100000 * COIN) &&  Balance <= (500000 * COIN)) {
-        nRewardCoinYear = 7 * CENT;
-    } else if (Balance >= (500000 * COIN) &&  Balance <= (1000000 * COIN)) {
-        nRewardCoinYear = 8 * CENT;
-    } else if (Balance >= (1000000 * COIN) &&  Balance <= (10000000 * COIN)){
-        nRewardCoinYear = 9 * CENT;
     } else {
-        nRewardCoinYear = 10 * CENT;
+        nRewardCoinYear = 0 * CENT;
     }
    
      int64_t nSubsidy = nCoinAge * nRewardCoinYear / 365;
